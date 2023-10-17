@@ -12,6 +12,7 @@ import lombok.Data;
 @Data
 @Entity(name = "tb_account")
 public class Account {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,8 +24,8 @@ public class Account {
     @Column(precision = 2, scale = 13)
     private BigDecimal balance;
 
-    @Column(name = "additional_limit", precision = 2, scale = 13)
-    private BigDecimal limit;
+    @Column(precision = 2, scale = 13)
+    private BigDecimal additional_limit;
 
 
 

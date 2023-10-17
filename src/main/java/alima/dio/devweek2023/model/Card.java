@@ -1,5 +1,7 @@
 package alima.dio.devweek2023.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import lombok.Data;
 @Data
 @Entity(name = "tb_card")
 public class Card {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,7 +20,7 @@ public class Card {
 
     private String number;
 
-    @Column(name = "available_limit", precision = 2, scale = 13)
-    private float limit;
+    @Column(precision = 2, scale = 13)
+    private BigDecimal available_limit;
     
 }
