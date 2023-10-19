@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import alima.dio.devweek2023.model.User;
 
 @Repository
-public interface IUserRepository extends JpaRepository<User, Long>{
+public interface UserRepository extends JpaRepository<User, Long>{
+
+    boolean existsByAccountNumber(String accountNumber);
     
 }
